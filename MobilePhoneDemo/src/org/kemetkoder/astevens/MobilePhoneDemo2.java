@@ -11,9 +11,6 @@ public class MobilePhoneDemo2 {
 		
 		System.out.println("Welcome to Cyberdyne Telecommunication Systems");
 		displayMenu(mPhone);
-		
-		
-		//testContactList(mPhone);
 
 	}
 
@@ -43,7 +40,6 @@ public class MobilePhoneDemo2 {
 		switch(userSelection) {
 		case 'D':
 		case 'd':
-			// TODO: retrieve and display contacts
 			phone.displayContacts();
 			break;
 		case 'A':
@@ -59,7 +55,6 @@ public class MobilePhoneDemo2 {
 			break;
 		case 'R':
 		case 'r':
-			// TODO: remove a contact
 			phone.removeContact();
 			break;
 		case 'F':
@@ -71,7 +66,6 @@ public class MobilePhoneDemo2 {
 			break;
 		case 'Q':
 		case 'q':
-			// TODO: quit
 			System.out.println("Good-bye.");
 			break;
 		default:
