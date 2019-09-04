@@ -53,7 +53,7 @@ public class Branch {
         customerList.add(bankCustomer.createNewCustomer());
         System.out.println("Account for " + bankCustomer.getCustomerName() +
                 " has been added to branch: " + this.getBranchName());
-        
+
         // TEST...
 //        System.out.println("TEST:");
 //        for(Customer cust : this.getCustomerList())

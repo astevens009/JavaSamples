@@ -38,12 +38,12 @@ public class Bank {
         ArrayList<Customer> customerList = bnkBranch.getCustomerList();
 
         if(!customerList.isEmpty())
-	        for(Customer bankCustomer : customerList)
-	            System.out.println("ID: " + (customerList.indexOf(bankCustomer)+1) +
+            for(Customer bankCustomer : customerList)
+                System.out.println("ID: " + (customerList.indexOf(bankCustomer)+1) +
                         " - " + bankCustomer.displayCustomerInfo());
         else
-        	System.out.println("There are no customers for " + 
-        			bnkBranch.getBranchName());
+            System.out.println("There are no customers for " +
+                    bnkBranch.getBranchName());
     }
 
     /**

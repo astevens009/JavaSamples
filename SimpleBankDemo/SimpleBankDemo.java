@@ -60,10 +60,8 @@ public class SimpleBankDemo {
 
                 break;
             case 'L':
-
-                if(bank != null) {
+                if(bank != null)
                     bank.displayCustomers(bankBranch);
-                }
                 else
                     System.out.println("There is no bank information to display.");
                 break;
@@ -102,7 +100,7 @@ public class SimpleBankDemo {
 
                 bankBranch = bank.createBranch(branchName, branchRegion);
                 bank.setBankBranch(bankBranch);
-                System.out.println("\nTEST - performOption:\nBranch Name: " + bankBranch.getBranchName());
+//                System.out.println("\nTEST - performOption:\nBranch Name: " + bankBranch.getBranchName());
 //                System.out.println("\nTEST:\nBranch Name: " + bankBranch.getBranchName() +
 //                        "\nBranch Region: " + bankBranch.getBranchRegion());
                 break;
@@ -120,7 +118,7 @@ public class SimpleBankDemo {
             case 'L':
                 if(bank != null) {
                     // Display a list of branches if there is more than one branch
-                    if(bank.getBranchList().size() > 1) {
+                    if (bank.getBranchList().size() > 1) {
                         bankBranch = selectBranch(bank);
                     }
 
