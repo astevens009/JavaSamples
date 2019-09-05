@@ -50,9 +50,24 @@ public class Branch {
         Customer bankCustomer = new Customer();
 
         // TODO: Add customer to branch accounts
-        customerList.add(bankCustomer.createNewCustomer());
-        System.out.println("Account for " + bankCustomer.getCustomerName() +
-                " has been added to branch: " + this.getBranchName());
+        // TODO: Make sure the customer doesn't already exist
+        // NOTE: This logic allows for the entry of an amount before checking to be sure the
+        // account doesn't exist. This will need to be refactored to stop before requesting
+        // the deposit information
+        int customerIndex = -1;
+        bankCustomer = bankCustomer.createNewCustomer();
+        for(Customer bnkCust : getCustomerList()){
+            if(bnkCust.getCustomerName().equals(bankCustomer.getCustomerName()))
+               customerIndex = this.getCustomerList().indexOf(bnkCust);
+        }
+
+        if(customerIndex < 0) {
+            customerList.add(bankCustomer);
+            System.out.println("Account for " + bankCustomer.getCustomerName() +
+                    " has been added to branch: " + this.getBranchName());
+        }
+        else
+            System.out.println(bankCustomer.getCustomerName() + " already exists at this branch.");
 
         // TEST...
 //        System.out.println("TEST:");
