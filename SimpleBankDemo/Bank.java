@@ -62,6 +62,12 @@ public class Bank {
         int custID;
         Transaction xAction = new Transaction();
 
+        // TODO: Display the list of bank branches
+        // Display a list of branches if there is more than one branch
+        if (this.getBranchList().size() > 1) {
+            this.setBankBranch(selectBranch(this));
+        }
+
         // TODO: List the customers for the branch
         System.out.println("Please select the customer for the transaction:");
         this.displayCustomers(this.getBankBranch());
@@ -112,5 +118,25 @@ public class Bank {
             default:
                 System.out.println("ERROR: Invalid transaction.");
         }
+    }
+
+    private static Branch selectBranch(Bank bank) {
+        Scanner userInput = new Scanner(System.in);
+        int menuOpt;
+        int selectedBranch;
+
+        System.out.println("\nSelect a branch to add an account to:");
+        for (Branch br : bank.getBranchList()) {
+            menuOpt = (bank.getBranchList().indexOf(br) + 1);
+            System.out.println(menuOpt + " - " + br.getBranchName());
+        }
+
+        // TODO: Select bank branch
+        System.out.println("\nEnter your selection here: ");
+        selectedBranch = userInput.nextInt();
+        userInput.nextLine();       // Catch extraneous newline character
+        Branch bankBranch = bank.getBranchList().get(selectedBranch - 1);
+
+        return bankBranch;
     }
 }
