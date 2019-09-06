@@ -5,6 +5,7 @@ package org.kemetkoder.astevens;
  */
 public class Transaction {
     public enum TransactionType{
+        showBalance,
         deposit,
         withdrawl
     }
@@ -78,6 +79,9 @@ public class Transaction {
     public void transactionMenu(){
         for(TransactionType trType : TransactionType.values()){
             switch(trType){
+                case showBalance:
+                    System.out.println("B - Show Balance");
+                    break;
                 case deposit:
                     System.out.println("D - Deposit");
                     break;

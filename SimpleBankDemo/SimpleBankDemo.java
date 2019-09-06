@@ -149,7 +149,7 @@ public class SimpleBankDemo {
             System.out.println(menuOpt + " - " + br.getBranchName());
         }
 
-        // TODO: Select bank branch
+        // Select bank branch
         System.out.println("\nEnter your selection here: ");
         selectedBranch = userInput.nextInt();
         userInput.nextLine();       // Catch extraneous newline character

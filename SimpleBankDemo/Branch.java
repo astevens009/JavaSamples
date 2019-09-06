@@ -44,16 +44,16 @@ public class Branch {
     /**
      * Prompt user for customer information, create a new customer and add them to
      * the branch accounts list
+     *
+     * NOTE: This logic allows for the entry of an amount before checking to be sure the
+     * account doesn't exist. This will need to be refactored to stop before requesting
+     * the deposit amount information
      */
     public void addNewCustomer(){
 
         Customer bankCustomer = new Customer();
 
-        // TODO: Add customer to branch accounts
-        // TODO: Make sure the customer doesn't already exist
-        // NOTE: This logic allows for the entry of an amount before checking to be sure the
-        // account doesn't exist. This will need to be refactored to stop before requesting
-        // the deposit information
+        // Add customer to branch accounts also make sure the customer doesn't already exist
         int customerIndex = -1;
         bankCustomer = bankCustomer.createNewCustomer();
         for(Customer bnkCust : getCustomerList()){
@@ -80,7 +80,6 @@ public class Branch {
      * @param bankCustomer
      */
     public void addNewCustomer(Customer bankCustomer) {
-        // TODO: Add customer to branch accounts
         customerList.add(bankCustomer);
         System.out.println("Account for " + bankCustomer.getCustomerName() +
                 " has been added to this branch");
