@@ -6,6 +6,7 @@ package org.kemetkoder.astevens;
 public class Transaction {
     public enum TransactionType{
         showBalance,
+        showTransactions,
         deposit,
         withdrawl
     }
@@ -81,6 +82,9 @@ public class Transaction {
             switch(trType){
                 case showBalance:
                     System.out.println("B - Show Balance");
+                    break;
+                case showTransactions:
+                    System.out.println("T - Show Transactions");
                     break;
                 case deposit:
                     System.out.println("D - Deposit");

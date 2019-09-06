@@ -107,6 +107,9 @@ public class Bank {
             case 'B':
                 branchCustomer.displayCustomerInfo();
                 break;
+            case 'T':
+                branchCustomer.showTransactions();
+                break;
             case 'D':
                 System.out.println("Please enter the amount to deposit: ");
                 transactionAmount = userInput.nextDouble();
