@@ -44,9 +44,6 @@ public class SimpleBankDemo {
 
                 bankBranch = bank.createBranch(branchName, branchRegion);
                 bank.setBankBranch(bankBranch);
-                System.out.println("\nTEST - performOption:\nBranch Name: " + bankBranch.getBranchName());
-//                System.out.println("\nTEST:\nBranch Name: " + bankBranch.getBranchName() +
-//                        "\nBranch Region: " + bankBranch.getBranchRegion());
                 break;
             case 'A':
                 // Display a list of branches if there is more than one branch
@@ -100,9 +97,7 @@ public class SimpleBankDemo {
 
                 bankBranch = bank.createBranch(branchName, branchRegion);
                 bank.setBankBranch(bankBranch);
-//                System.out.println("\nTEST - performOption:\nBranch Name: " + bankBranch.getBranchName());
-//                System.out.println("\nTEST:\nBranch Name: " + bankBranch.getBranchName() +
-//                        "\nBranch Region: " + bankBranch.getBranchRegion());
+
                 break;
             case 'A':
                 // Display a list of branches if there is more than one branch
@@ -176,11 +171,6 @@ public class SimpleBankDemo {
             //performOption(userSelection, bankBranch);
             bankBranch = performOption(bank, bankBranch, userSelection);      // NOTE: Get the updated branch information
             bank.setBankBranch(bankBranch);
-
-            // TEST...
-            // System.out.println("\nTEST - displayBankingMenu:\nBranch Name: " + bankBranch.getBranchName());
-            // TestCases tester = new TestCases();
-            // tester.multipleBranchTest(bank);
 
             System.out.println("Would you like another transaction? (Y/N)");
             userResponse = userInput.nextLine().charAt(0);

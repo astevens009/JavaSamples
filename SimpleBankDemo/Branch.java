@@ -68,11 +68,6 @@ public class Branch {
         }
         else
             System.out.println(bankCustomer.getCustomerName() + " already exists at this branch.");
-
-        // TEST...
-//        System.out.println("TEST:");
-//        for(Customer cust : this.getCustomerList())
-//        	System.out.println("Customer: " + cust.getCustomerName());
     }
 
     /**
