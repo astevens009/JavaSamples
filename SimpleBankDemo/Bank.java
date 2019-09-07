@@ -108,19 +108,21 @@ public class Bank {
                 branchCustomer.displayCustomerInfo();
                 break;
             case 'T':
-                branchCustomer.showTransactions();
+                branchCustomer.displayTransactions();
                 break;
             case 'D':
                 System.out.println("Please enter the amount to deposit: ");
                 transactionAmount = userInput.nextDouble();
                 userInput.nextLine();       // Capture extraneous newline character
-                xAction.performDeposit(branchCustomer, transactionAmount);
+                //xAction.performDeposit(branchCustomer, transactionAmount);
+                branchCustomer.performTransaction(Transaction.TransactionType.deposit, transactionAmount);
                 break;
             case 'W':
                 System.out.println("Please enter the amount to withdraw: ");
                 transactionAmount = userInput.nextDouble();
                 userInput.nextLine();       // Capture extraneous newline character
-                xAction.performWithdrawl(branchCustomer, transactionAmount);
+                //xAction.performWithdrawl(branchCustomer, transactionAmount);
+                branchCustomer.performTransaction(Transaction.TransactionType.withdrawl, transactionAmount);
                 break;
             default:
                 System.out.println("ERROR: Invalid transaction.");

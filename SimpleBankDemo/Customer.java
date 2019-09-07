@@ -95,11 +95,15 @@ public class Customer {
     /**
      * Using Autoboxing and unboxing in this demo, to correspond with lesson topic
      */
-    public void showTransactions(){
-        for(Transaction transx : customerTransactions){
-            System.out.println("Transaction Type: " + transx.getTransType() +
-                    "\nTransaction Amount: " + transx.getAmount().doubleValue());
-            System.out.println();
+    public void displayTransactions(){
+        if(!customerTransactions.isEmpty()) {
+            for (Transaction transx : customerTransactions) {
+                System.out.println("Transaction Type: " + transx.getTransType() +
+                        "\nTransaction Amount: " + transx.getAmount().doubleValue());
+                System.out.println();
+            }
         }
+        else
+            System.out.println("No transactions for this customer are available.");
     }
 }
