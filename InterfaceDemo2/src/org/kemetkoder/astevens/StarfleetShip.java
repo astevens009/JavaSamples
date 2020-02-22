@@ -91,7 +91,8 @@ public class StarfleetShip implements ISpaceVessel {
     public VesselDiagnostic performDiagnostic(int level) {
         VesselDiagnostic diagnostic = new VesselDiagnostic();
 
-        System.out.println("Ship Status: " + diagnostic.displayDiagnosticReport());
+        System.out.println("\nDiagnostic Level: " + level +
+                "\nShip Status: " + diagnostic.displayDiagnosticReport());
 
         return diagnostic;
     }

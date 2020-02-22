@@ -26,6 +26,11 @@ public class VesselDiagnostic implements IDiagnostic {
 
     @Override
     public String displayDiagnosticReport() {
-        return "TEST: All systems are online and functioning.";
+        String diagReport;
+
+        diagReport = String.format("\nCurrent Component Status: %s", getCmpStat());
+
+        // TODO: Make a more detailed diagnostic report
+        return diagReport;
     }
 }
