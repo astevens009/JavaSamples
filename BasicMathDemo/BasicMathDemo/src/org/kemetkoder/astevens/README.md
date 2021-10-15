@@ -5,7 +5,7 @@
 
 <hr/>
 
-###Exercise 2
+### Exercise 2
 Write a Java program to print the sum of two numbers. 
 
 <pre>
