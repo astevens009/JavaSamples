@@ -10,6 +10,38 @@ public class Main {
         System.out.println("Maximum apples picked is " + MaxApples(orchard, K, L));
     }
 
+    // region Second Attempt
+    private static int MaxApples(int[] orchard, int k, int l) {
+        int sum = 0;
+
+        if ((k + l) > orchard.length) {
+            sum = -1;
+        }
+        if ((k + l) == orchard.length) {
+            // take the sum of the elements in the array
+            for (int i = 0; i < orchard.length; i++)
+                sum += orchard[i];
+        }
+        if ((k + l) < orchard.length) {
+            // TODO: Get the max apples picked by Alice
+
+            // TODO: Get the max apples picked by Bob
+
+            // TODO: return the max_alice + max_bob
+            
+            sum = k + l;
+        }
+        // endregion
+
+        // region First Attempt
+        /**
+         * First attempt...
+         * @param orchard
+         * @param aliceTrees
+         * @param bobTrees
+         * @return
+         */
+    /*
     private static int MaxApples(int[] orchard, int aliceTrees, int bobTrees) {
         int sum = 0;
         int picked = 0; //number of apples picked
@@ -49,4 +81,10 @@ public class Main {
 
         return sum;
     }
+     */
+        // endregion
+
+        return sum;
+    }
+
 }
